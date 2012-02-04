@@ -32,6 +32,7 @@ body section section {
 
 #paper {
     display: inline-block;
+    position: relative;
     height: 594px;
     width: 420px;
     background-color: #fcfcfc;
@@ -45,6 +46,7 @@ header {
 .component {
     display: inline-block;
     position: relative;
+    z-index: 1;
     background-color: #aaa;
     height: 50px;
     width: 150px;
@@ -52,7 +54,7 @@ header {
 }
 
 .component:hover {
-    border: dotted #000 2px;
+    border: dotted #000 1px;
 }
 
 .handle {
@@ -66,8 +68,18 @@ header {
     width: 16px;
     height: 16px;
 }
+
 #menu ul {
     list-style: none;
     padding: 2px;
+}
+
+.element{
+    display: inline-block;
+    position: absolute;
+}
+
+.selected{
+    border: dotted red 1px;
 }
         
