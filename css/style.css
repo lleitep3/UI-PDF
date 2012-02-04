@@ -1,0 +1,73 @@
+section, div {
+    border: dotted #cccccc 1px;
+}
+
+body section {
+    float: inside;
+    width: 100%;
+    text-align: center;
+}
+
+body section section {
+    margin: 10px 15px;
+}
+
+#esquerda {
+    position: absolute;
+    width: 20%;
+}
+
+#center {
+    display: inline-block;
+    margin: 5px auto;
+    height: auto;
+    width: auto;
+    padding: 2em 4em;
+    background-color: #eee;
+    border-radius: 25px;
+    -moz-box-shadow: inset -3px -5px 10px 0.9px #aaa;
+    -webkit-box-shadow: inset -3px -5px 10px 0.9px #aaa;
+    box-shadow: inset -3px -5px 10px 0.9px #aaa;
+}
+
+#paper {
+    display: inline-block;
+    height: 594px;
+    width: 420px;
+    background-color: #fcfcfc;
+    box-shadow: -15px -10px 15px -7px #ccc;
+}
+
+header {
+    text-align: center;
+}
+
+.component {
+    display: inline-block;
+    position: relative;
+    background-color: #aaa;
+    height: 50px;
+    width: 150px;
+    cursor: move;
+}
+
+.component:hover {
+    border: dotted #000 2px;
+}
+
+.handle {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #fff;
+    background-image: url('img/draggable.png');
+    background-repeat: no-repeat;
+    cursor: move;
+    width: 16px;
+    height: 16px;
+}
+#menu ul {
+    list-style: none;
+    padding: 2px;
+}
+        
