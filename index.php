@@ -10,19 +10,23 @@
 
         <script type="text/javascript">
             $(function(){
-                $('.component').draggable({ helper: "clone", revert : "invalid" });
+                $('.component').draggable({ helper: "clone", revert : "invalid"});
                 $('#paper').droppable({
                     drop: function( event, ui ) {
                         if($(ui.draggable).hasClass('component')){
                             var $el = $(ui.draggable)
-                                      .clone()
-                                      .removeClass('component')
-                                      .css('top', ui.position.top,'left')
-                                      .addClass('valid element');
+                            .clone()
+                            .removeClass('component')
+                            .css('top', ui.position.top,'left')
+                            .addClass('valid element');
                             
                             $(this).append($el);
                             selectElement($el);
-                            $('.valid').draggable({ containment : 'parent' });
+                            $('.valid').draggable({ containment : 'parent',
+                                drag: function(event, ui){
+                                    selectElement($(ui.helper));
+                                }
+                            });
                         }
                     }
                 });
